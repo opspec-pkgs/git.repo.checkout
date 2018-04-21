@@ -1,0 +1,32 @@
+name: github.com/opspec-pkgs/git.repo.checkout
+description: Checkout a branch in a git repo; equivalent to `git checkout`
+version: 1.0.0
+inputs:
+  repo:
+    dir:
+      description: repo to checkout in
+      default: ./
+  isNewBranch:
+    boolean:
+      description: whether this is a new branch
+      default: true
+  branchName:
+    string:
+      description: name of branch to checkout
+      constraints: { minLength: 1 }
+outputs:
+  repo:
+    dir:
+      description: repo with checked out branch
+run:
+  container:
+    cmd: [ /cmd.sh ]
+    dirs:
+      /repo: $(repo)
+    envVars:
+      branchName:
+      isNewBranch:
+    files:
+      /cmd.sh:
+    image: { ref: 'opspecpkgs/git.repo.checkout:1.0.0' }
+    workDir: /repo
