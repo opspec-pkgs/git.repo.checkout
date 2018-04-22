@@ -31,6 +31,7 @@ op:
   ref: github.com/opspec-pkgs/git.repo.checkout#1.0.0
   inputs:
     branchName:
+    isNewBranch:
     # params w/ default
     repo:
   outputs:
