@@ -1,19 +1,21 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/git.repo.checkout.svg?branch=master)](https://travis-ci.org/opspec-pkgs/git.repo.checkout)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 Checkout a branch in a git repo; equivalent to `git checkout`
 
 # Format
 
-this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+the op uses [![opspec 0.1.6](https://img.shields.io/badge/opspec-0.1.6-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.6) definition format
 
 # Example usage
 
 ## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/git.repo.checkout#1.0.0
+opctl op install github.com/opspec-pkgs/git.repo.checkout#1.0.0
 ```
 
 ## Run
@@ -26,7 +28,13 @@ opctl run github.com/opspec-pkgs/git.repo.checkout#1.0.0
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/git.repo.checkout#1.0.0 }
+  ref: github.com/opspec-pkgs/git.repo.checkout#1.0.0
+  inputs:
+    branchName:
+    # params w/ default
+    repo:
+  outputs:
+    repo:
 ```
 
 # Support
