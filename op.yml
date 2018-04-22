@@ -1,6 +1,7 @@
 name: github.com/opspec-pkgs/git.repo.checkout
 description: Checkout a branch in a git repo; equivalent to `git checkout`
 version: 1.0.0
+opspec: 0.1.6
 inputs:
   repo:
     dir:
