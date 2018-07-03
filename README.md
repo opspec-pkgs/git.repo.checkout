@@ -31,7 +31,6 @@ op:
   ref: github.com/opspec-pkgs/git.repo.checkout#1.0.0
   inputs:
     branchName:
-    isNewBranch:
     # params w/ default
     repo:
   outputs:
@@ -41,7 +40,7 @@ op:
 # Support
 
 join us on
-[![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+[![Slack](https://opctl-slackin.herokuapp.com/badge.svg)](https://opctl-slackin.herokuapp.com/)
 or
 [open an issue](https://github.com/opspec-pkgs/git.repo.checkout/issues)
 
